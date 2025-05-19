@@ -1,97 +1,122 @@
+/* Background and global styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f0f0f0;
-    transition: background-color 0.5s ease-in-out;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #d9fdd3;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('https://images.unsplash.com/photo-1610014559687-3d5e5bb4f86d?auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  transition: background-color 0.5s ease;
 }
 
+/* Header */
 header {
-    background: linear-gradient(to right, #ff5733, #c70039);
-    color: white;
-    text-align: center;
-    padding: 20px;
+  background-color: rgba(0, 50, 20, 0.85);
+  color: #a8ff9e;
+  padding: 1em 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
+header h1 {
+  margin: 0;
+  font-size: 2em;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+/* Navigation */
+nav {
+  margin-top: 0.5em;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    transition: color 0.3s ease-in-out;
+nav a {
+  color: #baffc9;
+  margin: 0 1em;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: yellow;
+nav a:hover {
+  color: #00ff88;
 }
 
-h1, h2 {
-    cursor: pointer;
-    transition: color 0.3s ease-in-out;
+/* Main content */
+main {
+  padding: 2em;
+  background-color: rgba(0, 20, 10, 0.8);
+  margin: 2em auto;
+  max-width: 1200px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 100, 50, 0.4);
 }
 
-h1:hover, h2:hover {
-    color: #ff5733;
+/* Intro section */
+.intro {
+  text-align: center;
+  margin-bottom: 2em;
 }
 
-.home, .brands, .contact {
-    text-align: center;
-    margin: 50px auto;
-    max-width: 800px;
-    padding: 30px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+.intro h2 {
+  color: #afffaf;
 }
 
-.home:hover, .brands:hover, .contact:hover {
-    transform: scale(1.05);
+/* Gallery layout */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
 }
 
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #ff5733;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
+/* Card styling */
+.card {
+  background-color: rgba(0, 30, 10, 0.9);
+  border: 1px solid #1a5f3d;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 260px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 50, 20, 0.5);
 }
 
-.button:hover {
-    background: #c70039;
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 150, 70, 0.4);
 }
 
-.brand {
-    margin: 20px;
-    padding: 20px;
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  opacity: 0.95;
+  transition: opacity 0.3s ease;
 }
 
-.brand img {
-    max-width: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+.card:hover img {
+  opacity: 1;
 }
 
-.brand img:hover {
-    transform: scale(1.1);
+.card h3 {
+  color: #13e02e;
+  margin: 0.5em;
+  text-align: center;
 }
 
+.card p {
+  padding: 0 1em 1em;
+  font-size: 0.9em;
+  color: #dbffe0;
+  text-align: center;
+}
+
+/* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: linear-gradient(to right, #c70039, #ff5733);
-    color: white;
+  background-color: rgba(0, 30, 10, 0.9);
+  color: #90ffa6;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: 2em;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.4);
 }
